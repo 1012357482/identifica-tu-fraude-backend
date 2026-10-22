@@ -11,7 +11,7 @@ from src.infrastructure.tools.image_tool import process_evidence_image
 class FraudShieldAgent:
     def __init__(self):
         self.client = genai.Client(api_key=GEMINI_API_KEY)
-        self.model_name = "gemini-2.0-flash"
+        self.model_name = "gemini-3.8-flash"
 
     def analyze_case(self, user_text: str = "", image_bytes: bytes = None) -> str:
         evidence_metadata = ""
