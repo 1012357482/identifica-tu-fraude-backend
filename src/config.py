@@ -9,4 +9,4 @@ VIRUSTOTAL_API_KEY = os.getenv("VIRUSTOTAL_API_KEY", "")
 AUTONOMY_LEVEL = os.getenv("AUTONOMY_LEVEL", "assisted")
 
 if not GEMINI_API_KEY or not TELEGRAM_BOT_TOKEN:
-    raise ValueError("⚠️ Faltan variables de entorno requeridas: GEMINI_API_KEY o TELEGRAM_BOT_TOKEN.")
+    raise ValueError(" Faltan variables de entorno requeridas: GEMINI_API_KEY o TELEGRAM_BOT_TOKEN.")
