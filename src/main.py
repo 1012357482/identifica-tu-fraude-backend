@@ -10,7 +10,7 @@ agent = FraudShieldAgent()
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     welcome_text = (
-        "🔍 **Identifica tu fraude**\n"
+        " **Identifica tu fraude**\n"
         "_Agente de orientación frente al fraude digital_\n\n"
         "¿Te llegó un mensaje, enlace, audio o llamada que parece sospechosa?\n\n"
         "1. **Pega o cuenta:** Envíame el mensaje, enlace o foto de una captura / código QR de pago.\n"
@@ -47,7 +47,11 @@ def main():
     app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
     
     print(" Bot 'Identifica tu fraude' iniciado y escuchando...")
-    app.run_polling()
+
+    if __name__ == "__main__":
+        logger.info("Bot 'Identifica tu fraude' iniciado y escuchando...")   
+        # drop_pending_updates=True limpia mensajes en cola acumulados durante caídas de red
+         app.run_polling(drop_pending_updates=True, poll_interval=1.0)
 
 if __name__ == "__main__":
     main()
