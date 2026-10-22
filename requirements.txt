@@ -1,0 +1,8 @@
+python-telegram-bot==20.8
+google-genai
+safeaipackage
+requests
+pillow
+pyzbar
+pytest
+python-dotenv
