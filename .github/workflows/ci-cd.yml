@@ -61,5 +61,6 @@ jobs:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         VIRUSTOTAL_API_KEY: ${{ secrets.VIRUSTOTAL_API_KEY }}
         AUTONOMY_LEVEL: ${{ secrets.AUTONOMY_LEVEL }}
+        PYTHONUNBUFFERED: "1"
       run: |
         python -m src.main
