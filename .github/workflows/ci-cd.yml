@@ -63,4 +63,4 @@ jobs:
         AUTONOMY_LEVEL: ${{ secrets.AUTONOMY_LEVEL }}
         PYTHONUNBUFFERED: "1"
       run: |
-        python -m src.main
+        python -u -m src.main
